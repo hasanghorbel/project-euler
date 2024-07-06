@@ -2,11 +2,12 @@ fn large_sum(k: usize) -> u64 {
     INPUT
         .trim()
         .lines()
-        .map(|line| &line[0..k+2])
+        .map(|line| &line[0..k + 2])
         .filter_map(|s| s.parse::<u64>().ok())
         .sum::<u64>()
         .to_string()[0..10]
-        .parse::<u64>().unwrap()
+        .parse::<u64>()
+        .unwrap()
 }
 const INPUT: &str = r"
 37107287533902102798797998220837590246510135740250
@@ -114,8 +115,9 @@ const INPUT: &str = r"
 fn main() {
     use std::time::Instant;
     let now = Instant::now();
-    println!("{}", large_sum(10));
+    let result = large_sum(10);
     let elapsed = now.elapsed();
+    println!("{}", result);
     println!("Elapsed: {:.2?}", elapsed);
 }
 

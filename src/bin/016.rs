@@ -31,8 +31,9 @@ fn power_digit_sum(n: u32, exp: usize) -> u32 {
 fn main() {
   use std::time::Instant;
   let now = Instant::now();
-  println!("{}", power_digit_sum(2, 1000));
+  let result = power_digit_sum(2, 1000);
   let elapsed = now.elapsed();
+  println!("{}", result);
   println!("Elapsed: {:.2?}", elapsed);
 }
 

@@ -96,8 +96,9 @@ const WIDTH: usize = 20;
 fn main() {
     use std::time::Instant;
     let now = Instant::now();
-    println!("{}", largest_prod(4));
+    let result = largest_prod(4);
     let elapsed = now.elapsed();
+    println!("{}", result);
     println!("Elapsed: {:.2?}", elapsed);
 }
 

@@ -1,5 +1,6 @@
 fn n_th_adjacent_digits(n: usize) -> u64 {
-    INPUT.chars()
+    INPUT
+        .chars()
         .filter_map(|c| c.to_digit(10))
         .map(|n| n as u64)
         .collect::<Vec<_>>()
@@ -35,8 +36,9 @@ const INPUT: &str = r"
 fn main() {
     use std::time::Instant;
     let now = Instant::now();
-    println!("{}", n_th_adjacent_digits(13));
+    let result = n_th_adjacent_digits(13);
     let elapsed = now.elapsed();
+    println!("{}", result);
     println!("Elapsed: {:.2?}", elapsed);
 }
 

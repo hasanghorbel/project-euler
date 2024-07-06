@@ -13,8 +13,9 @@ fn even_fibonacci_numbers(n: f64) -> u64 {
 fn main() {
     use std::time::Instant;
     let now = Instant::now();
-    println!("{}", even_fibonacci_numbers(4_000_000_f64));
+    let result = even_fibonacci_numbers(4_000_000_f64);
     let elapsed = now.elapsed();
+    println!("{}", result);
     println!("Elapsed: {:.2?}", elapsed);
 }
 
@@ -24,6 +25,6 @@ mod tests {
 
     #[test]
     fn test_1() {
-      assert_eq!(even_fibonacci_numbers(4_000_000_f64), 4613732);
+        assert_eq!(even_fibonacci_numbers(4_000_000_f64), 4613732);
     }
 }

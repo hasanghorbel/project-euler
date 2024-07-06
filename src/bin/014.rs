@@ -29,8 +29,9 @@ fn longest_collatz_sequence(limit: u64) -> u64 {
 fn main() {
   use std::time::Instant;
   let now = Instant::now();
-  println!("{}", longest_collatz_sequence(1_000_000));
+  let result = longest_collatz_sequence(1_000_000);
   let elapsed = now.elapsed();
+  println!("{}", result);
   println!("Elapsed: {:.2?}", elapsed);
 }
 

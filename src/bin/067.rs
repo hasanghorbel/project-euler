@@ -42,11 +42,9 @@ fn maximum_path_sum_ii(input: &[Vec<u32>]) -> u32 {
 fn main() {
     use std::time::Instant;
     let now = Instant::now();
-    println!(
-        "{}",
-        maximum_path_sum_ii(&parse(File::open("data/triangle.txt").unwrap()).unwrap())
-    );
+    let result = maximum_path_sum_ii(&parse(File::open("data/triangle.txt").unwrap()).unwrap());
     let elapsed = now.elapsed();
+    println!("{}", result);
     println!("Elapsed: {:.2?}", elapsed);
 }
 

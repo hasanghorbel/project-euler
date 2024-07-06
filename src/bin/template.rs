@@ -7,8 +7,9 @@ fn function() {
 fn main() {
   use std::time::Instant;
   let now = Instant::now();
-  //println!("{}", function());
+  //let result = function();
   let elapsed = now.elapsed();
+  //println!("{}", function());
   println!("Elapsed: {:.2?}", elapsed);
 }
 

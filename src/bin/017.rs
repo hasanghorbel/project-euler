@@ -12,7 +12,7 @@ fn convert(x: u64) -> String {
         6 => return "Six".to_string(),
         7 => return "Seven".to_string(),
         8 => return "Eight".to_string(),
-        9 => return "Nine".to_string(),  
+        9 => return "Nine".to_string(),
         10 => return "Ten".to_string(),
         11 => return "Eleven".to_string(),
         12 => return "Twelve".to_string(),
@@ -123,17 +123,18 @@ fn convert(x: u64) -> String {
 }
 
 fn number_letter_counts(k: u64) -> u32 {
-  (1..k + 1)
-  .map(convert)
-  .map(|w| w.chars().filter(|&c| c != '-' && c != ' ').count() as u32)
-  .sum()
+    (1..k + 1)
+        .map(convert)
+        .map(|w| w.chars().filter(|&c| c != '-' && c != ' ').count() as u32)
+        .sum()
 }
 
 fn main() {
     use std::time::Instant;
     let now = Instant::now();
-    println!("{}", number_letter_counts(1000));
+    let result = number_letter_counts(1000);
     let elapsed = now.elapsed();
+    println!("{}", result);
     println!("Elapsed: {:.2?}", elapsed);
 }
 
